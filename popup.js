@@ -37,15 +37,19 @@ document.addEventListener('DOMContentLoaded', function() {
       if (/\.battle\.net\/wow/.test(tab.url))
       {
         console.log("battle net char:"+tab.url);
-        // TODO parse out name/realm/region etc to build WAF url
+        // toons
         // example battle net url http://us.battle.net/wow/en/character/kel'thuzad/banedtitan/simple
         // target url http://wowactivity.kimptoc.net/view/member/us/kel'thuzad/banedtitan
+        // guilds
+        // - http://us.battle.net/wow/en/guild/kelthuzad/Skeleton_Crew/
+        // - http://wowactivity.kimptoc.net/view/guild/us/kel'thuzad/Skeleton%20Crew/
         var region = tab.url.substr(7,2);
         var path_parts = tab.url.split(/\//);
         var character_or_guild = path_parts[5];
         var realm = path_parts[6];
         var name = path_parts[7];
-        var waf_url = 'http://wowactivity.kimptoc.net/view/member/'+region+'/'+realm+'/'+name
+        name = name.replace('_',' ');
+        var waf_url = 'http://wowactivity.kimptoc.net/view/'+character_or_guild+'/'+region+'/'+realm+'/'+name
         chrome.tabs.create({'url':waf_url,'openerTabId':tab.id});
 
       } else {
