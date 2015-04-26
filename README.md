@@ -28,6 +28,7 @@ TODO
 
 * when button clicked
   * open new tab showing corresponding WAF page
+* handle guilds too
 * how to get correct locale - is there a good default in WAF? Or leave it to user to switch?
 * tweak button based on url
   * if not, hide/disable button

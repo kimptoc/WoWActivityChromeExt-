@@ -38,7 +38,15 @@ document.addEventListener('DOMContentLoaded', function() {
       {
         console.log("battle net char:"+tab.url);
         // TODO parse out name/realm/region etc to build WAF url
-        chrome.tabs.create({'url':'http://wowactivity.kimptoc.net/','openerTabId':tab.id});
+        // example battle net url http://us.battle.net/wow/en/character/kel'thuzad/banedtitan/simple
+        // target url http://wowactivity.kimptoc.net/view/member/us/kel'thuzad/banedtitan
+        var region = tab.url.substr(7,2);
+        var path_parts = tab.url.split(/\//);
+        var character_or_guild = path_parts[5];
+        var realm = path_parts[6];
+        var name = path_parts[7];
+        var waf_url = 'http://wowactivity.kimptoc.net/view/member/'+region+'/'+realm+'/'+name
+        chrome.tabs.create({'url':waf_url,'openerTabId':tab.id});
 
       } else {
         console.log("NOT a battle net char:"+tab.url);
