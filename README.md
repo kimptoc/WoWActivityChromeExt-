@@ -26,8 +26,6 @@ http://wowactivity.kimptoc.net/view/character/us/kel'thuzad/banedtitan[/en_US]
 
 TODO
 
-* when button clicked
-  * open new tab showing corresponding WAF page
 * handle guilds too
 * how to get correct locale - is there a good default in WAF? Or leave it to user to switch?
 * tweak button based on url
@@ -38,6 +36,8 @@ TODO
 
 DONE
 
+* when button clicked
+  * open new tab showing corresponding WAF page
 * how to debug - hopefully console.log works (it does). Also can right click on button to get inspect popup debug window
 * check if url is an armory page
 * extension can open a new tab :)
