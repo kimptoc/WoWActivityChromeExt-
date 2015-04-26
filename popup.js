@@ -37,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
       if (/\.battle\.net\/wow/.test(tab.url))
       {
         console.log("battle net char:"+tab.url);
+        // TODO parse out name/realm/region etc to build WAF url
+        chrome.tabs.create({'url':'http://wowactivity.kimptoc.net/','openerTabId':tab.id});
+
       } else {
         console.log("NOT a battle net char:"+tab.url);
       }
