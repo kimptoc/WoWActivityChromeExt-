@@ -43,14 +43,14 @@ Chrome Store Dev Dashboard - https://chrome.google.com/webstore/developer/dashbo
 TODO
 
 * do we need to have popup.html - can it be done from the extension button alone
-* screenshots on chrome store
 * how to get correct locale - is there a good default in WAF? Or leave it to user to switch?
-* tweak button based on url
-  * if not, hide/disable button
-  * if it is enable button
 
 DONE
 
+* tweak button based on url
+  * if not, hide/disable button
+  * if it is enable button
+* screenshots on chrome store
 * its a page action - https://developer.chrome.com/extensions/pageAction
 * when button clicked
   * open new tab showing corresponding WAF page
