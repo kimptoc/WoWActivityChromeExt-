@@ -3,13 +3,17 @@
 
   "name": "WoW Activity Lookup",
   "description": "This extension will open the corresponding WoW Activity page for a WoW Armory page.",
-  "version": "2.0",
+  "version": "3.0",
 
-  "browser_action": {
+  "background": {
+     "scripts": ["background.js"]
+   },
+
+  "page_action": {
    "default_icon": "icon.png",
    "default_popup": "popup.html"
   },
   "permissions": [
-   "activeTab"
+    "tabs"
    ]
 }

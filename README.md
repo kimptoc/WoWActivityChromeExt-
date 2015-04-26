@@ -37,10 +37,12 @@ become:
 http://wowactivity.kimptoc.net/view/guild/us/kel'thuzad/Skeleton%20Crew/en_US
 
 
+Chrome Store Dev Dashboard - https://chrome.google.com/webstore/developer/dashboard
+
+
 TODO
 
 * do we need to have popup.html - can it be done from the extension button alone
-  * looks like it should be a page action - https://developer.chrome.com/extensions/pageAction
 * screenshots on chrome store
 * how to get correct locale - is there a good default in WAF? Or leave it to user to switch?
 * tweak button based on url
@@ -49,6 +51,7 @@ TODO
 
 DONE
 
+* its a page action - https://developer.chrome.com/extensions/pageAction
 * when button clicked
   * open new tab showing corresponding WAF page
 * how to debug - hopefully console.log works (it does). Also can right click on button to get inspect popup debug window
